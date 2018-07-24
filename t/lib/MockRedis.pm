@@ -3,12 +3,14 @@ package MockRedis;
 use strict;
 use warnings;
 
-use base 'Redis::Fast';
-
 our %storage;
 
 sub new {
-    return bless {}, shift;
+    my $self = bless {}, shift;
+
+    @MockRedis::ISA = ( 'Redis::Fast' );
+
+    return $self;
 }
 
 sub get{
