@@ -1,0 +1,7 @@
+MANIFEST
+LICENSE
+Build.PL
+lib/Model/Envoy/Storage/Redis.pm
+t/pod.t
+META.yml
+META.json
