@@ -1,6 +1,6 @@
 package Model::Envoy::Storage::Redis;
 
-our $VERSION = '0.1.1';
+our $VERSION = '0.1.2';
 
 use Moose;
 use MooseX::ClassAttribute;
@@ -60,6 +60,11 @@ sub save {
     $self->redis->set( 'id:' . $self->model->id => encode_json( $self->model->dump ) );
 
     return $self;
+}
+
+sub list {
+
+    return undef;
 }
 
 sub delete {
